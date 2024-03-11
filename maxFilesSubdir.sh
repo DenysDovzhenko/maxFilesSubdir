@@ -5,11 +5,11 @@ redColor='\033[0;31m'
 noColor='\033[0m'
 
 filesVolume() {
-    [[ $# -ne 1 ]] && echo "Usage: $0 DIRECTORY" && exit 1
+    [[ $# -ne 1 ]] && echo "There are have to be one argument" && exit 1
 
     DIR="$1"
 
-    [[ ! -d "$DIR" ]] && echo "Error: '$DIR' is not a valid directory." && exit 1
+    [[ ! -d "$DIR" ]] && echo "Error: '$DIR' is not a valid directory." && exit 2
 
     subdirs=("$DIR"/*)
     max_files=0
